@@ -19,9 +19,15 @@ Tart Manager updates itself. `brew upgrade` skips it unless you add
 
 ## Update the cask
 
-After a Tart Manager release, set `version` and `sha256` in
-`Casks/tart-manager.rb`:
+After a Tart Manager release, get the DMG checksum:
 
 ```sh
-brew bump-cask-pr --version <X.Y.Z> alexandrpkhm/tap/tart-manager
+shasum -a 256 TartManager-X.Y.Z.dmg
+```
+
+In `Casks/tart-manager.rb`, set `version` and `sha256`, then commit
+`chore: bump tart-manager to X.Y.Z`. Check the cask:
+
+```sh
+brew update && brew audit --cask --online alexandrpkhm/tap/tart-manager
 ```
