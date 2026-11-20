@@ -1,6 +1,6 @@
 cask "tart-manager" do
-  version "1.4.0"
-  sha256 "1a939c78bd6fd39d4f4920d67ad13ae46e679b3892e6b0280c6fbd94d2762eb3"
+  version "1.5.0"
+  sha256 "758c336d841439be3ac22f6b943a5c572b6e225221a4d3ded7dc0968782ebf8b"
 
   url "https://github.com/AlexandrPkhm/TartManager/releases/download/v#{version}/TartManager-#{version}.dmg"
   name "Tart Manager"
